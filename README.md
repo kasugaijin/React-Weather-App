@@ -4,4 +4,4 @@ This React application is a way for me to learn the fundamentals of React. It is
 
 React has been enjoyable to work with so far and I look forward to learning more about the library.
 
-(View Live)[https://kasugaijin.github.io/React-Weather-App/]
+[View Live](https://kasugaijin.github.io/React-Weather-App/)
