@@ -23,7 +23,7 @@ function App() {
   }
 
   const formatAndUpdateTime = (utxTime) => {
-    const time = new Date(utxTime).toString().substring(0,25)
+    const time = new Date(utxTime * 1000).toString().substring(0,25)
     setResponseTime(time)
   }
 
@@ -32,7 +32,7 @@ function App() {
   }
 
   const executeFetchWeatherData = () => {
-    if(sendRequest === true) {
+    if(sendRequest) {
       fetchWeatherData()
     }
   }

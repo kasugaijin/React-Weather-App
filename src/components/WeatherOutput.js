@@ -14,7 +14,7 @@ const WeatherOutput = ({weatherData, time}) => {
                 <p>Wind direction: {weatherData.wind.deg}&deg;</p>
                 <p>Cloud coverage: {weatherData.clouds.all}%</p>
             </div>
-            <p>Retrieved at: {time}</p>
+            <p>Latest update: {time}</p>
         </div>
     )
 }
