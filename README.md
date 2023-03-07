@@ -5,5 +5,3 @@ This React application is a way for me to learn the fundamentals of React. It is
 Usually the `.env` file would be on the gitignore. In this case I am fine pushing these details to gitHub to enable it to run for others.
 
 React has been enjoyable to work with so far and I look forward to learning more about the library.
-
-[View Live](https://kasugaijin.github.io/React-Weather-App/)

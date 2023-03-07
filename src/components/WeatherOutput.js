@@ -1,27 +1,33 @@
 import PropTypes from "prop-types";
 import '../App.css';
+import Button from './Button';
 
-const WeatherOutput = ({weatherData, time}) => {
-    if (weatherData.main === undefined)
+const WeatherOutput = ({roundedTemp, dateTime, onButtonClick, sendRequest}) => {
+    if (dateTime === '')
         return <div>Waiting for data...</div>
     
     return(
         <div>
-            <div className="card">
-                <p className="location">{weatherData.name}</p>
-                <p>Temperature: {weatherData.main.temp}&deg;C</p>
-                <p>Windspeed: {weatherData.wind.speed} m/s</p>
-                <p>Wind direction: {weatherData.wind.deg}&deg;</p>
-                <p>Cloud coverage: {weatherData.clouds.all}%</p>
+            <div className="temp-container">
+                <div className="temp-label">Temperature</div>
+                <div className="temp-value">{roundedTemp}</div>
+                <div className="temp-unit">&deg;C</div>
             </div>
-            <p>Latest update: {time}</p>
+            <div className="datetime-container">
+                <div className="datetime-label">Last measured at</div>
+                <div className="datetime-value">{dateTime}</div>
+                <div>
+                    <Button onButtonClick={onButtonClick} sendRequest={sendRequest}/>
+                </div>
+            </div>
         </div>
     )
 }
 
+// shows warning in console if prop types are incorrect
 WeatherOutput.propTypes = {
-    weatherData: PropTypes.object,
-    time: PropTypes.string
+    roundedTemp: PropTypes.number,
+    dateTime: PropTypes.string
 }
 
 export default WeatherOutput;
